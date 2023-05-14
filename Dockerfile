@@ -10,4 +10,4 @@ RUN pip3 install -r /app/requirements.txt
 
 EXPOSE 8000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "--timeout", "120", "--max-requests", "600", "--log-file", "-", "dk8s.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "dk8s.wsgi:application"]
